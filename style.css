@@ -1,0 +1,281 @@
+* {
+    padding: 0px;
+    box-sizing: border-box;
+    margin: 0px;
+}
+
+body {
+    background-image: url("");
+    background-color: #0F1E2D;
+    height: 700px;
+}
+
+header img {
+    width: 10%;
+}
+
+header {
+    background-color: #171615;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 25px;
+    align-items: center;
+    margin-bottom: 100px;
+    position: sticky;
+    top: 0px;
+}
+
+#title {
+    color: white;
+    font-family: monospace;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+header a {
+    color: white;
+
+}
+
+header a:hover {
+    color: #60DDAF;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#connectWalletBtn {
+    background-color: #60DDAF;
+    border: solid;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #0F1E2D;
+    padding: 15px 2vw;
+    font-family: monospace;
+    font-weight: 600;
+    font-size: 14px;
+    transition: all 0.25s ease 0s;
+    white-space: nowrap;
+}
+
+.registerBtn {
+    border-style: solid;
+    padding: 10px;
+    background-color: #60DDAF;
+    border-radius: 5px;
+    border-color: #60DDAF;
+    color: #0F1E2D;
+    font-family: monospace;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 4px;
+    transition: background-color 0.3s, color 0.3s;
+
+}
+
+.registerBtn:hover {
+    background-color: #0F1E2D;
+    color: #60DDAF;
+}
+
+.registerBtn:active {
+    border-color: rgb(208, 222, 19);
+    color: rgb(208, 222, 19);
+
+}
+
+.input-box {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 350px;
+    margin: 20px auto;
+    text-align: center;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: auto;
+}
+
+
+#inputesCaixa {
+    border-style: solid;
+    border-width: 3px;
+    padding: 20px;
+    border-color: #339A82;
+    border-width: 4px;
+    border-radius: 30px;
+
+}
+
+#artigoCaixa {
+    border-style: solid;
+    color: #339A82;
+    padding: 20px;
+    border-radius: 30px;
+}
+
+.passos {
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: auto;
+    text-align: left;
+
+}
+
+#connectWalletBtn:hover {
+    background-color: #171615;
+    color: white;
+    border-color: #60DDAF;
+    color: #60DDAF;
+}
+
+#register-btn:hover {
+    background-color: #339A82;
+    color: white;
+}
+
+#connectWalletBtn:active {
+    opacity: 0.7;
+}
+
+#register-btn:active {
+    opacity: 0.7;
+}
+
+#img {
+    background-color: rgba(255, 255, 255, 0.427);
+    fill-opacity: 50%;
+    border-radius: 10px;
+    padding: 15px;
+
+}
+
+.contractAddressDiv {
+    text-align: center;
+
+}
+
+#inputNumberBox {
+    padding: 17px;
+}
+
+.inputes {
+    border-radius: 5px;
+    border-style: none;
+    padding: 12px;
+    margin-top: 4px;
+
+}
+
+.exposition {
+    text-align: center;
+    padding: 2px;
+
+
+}
+
+.expositionBox {
+
+    padding: 30px;
+
+}
+
+.imageBox {
+    padding: 5px;
+    border-style: solid;
+    max-width: 470px;
+    margin: 0 auto;
+    max-height: 400px;
+    border-color: #339A82;
+    border-left: none;
+    border-right: none;
+}
+
+#image {
+
+    height: 200px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+    background-color: #fff;
+}
+
+.espacoVisualizar {
+    padding: 10px;
+}
+
+.artInfo {
+    padding: 10px;
+    display: block;
+    font-size: 10px;
+    font-family: monospace;
+    color: #fff;
+
+}
+
+.artInfoText {
+    transition: 0.3s;
+}
+
+#totalArtes {
+    font-size: 25px;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+#copyToClipBoardOwnerBtn {
+    
+    padding: 10px;
+    font-size: 10px;
+    font-weight: bold;
+    color: #0F1E2D;
+    background-color: #339A82;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#copyToClipBoardOwnerBtn:hover {
+    background-color:#60DDAF ;
+}
+
+#copyToClipBoardOwnerBtn:active {
+    opacity: 0.7;
+}
+#copyContractAddressBtn {
+
+    padding: 10px;
+    font-size: 10px;
+    font-weight: bold;
+    color: #0F1E2D;
+    background-color: #339A82;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    
+}
+
+#copyContractAddressBtn:hover {
+    background-color: #60DDAF;
+}
+
+#copyContractAddressBtn:active {
+    opacity: 0.7;
+}
+
+.inputFile {
+    border-style: solid;
+    padding: 6px;
+    background-color: #60DDAF;
+    border-radius: 5px;
+    border-color: #60DDAF;
+    color: #0F1E2D;
+    font-family: monospace;
+    font-size: 12px;
+    margin-top: 4px;
+    transition: background-color 0.3s, color 0.3s;
+    
+
+}

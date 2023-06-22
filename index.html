@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="https://tokenaim.com.br/favicon.ico" type="image/x-icon">
+    <title>Narpy</title>
+</head>
+
+<body>
+    <header>
+        <img src="https://tokenaim.com.br/logo.png" alt="tokenaim-logo">
+        <span id="title">NARPY</span>
+        <a id="openSea" target="_blank" href="https://testnets.opensea.io/collection/narpyproject-8anshv4lii"
+            target="_blanck">View Asset
+            on Opensea</a>
+        <button id="connectWalletBtn">Connect wallet</button>
+    </header>
+    <main>
+        <div id="artigoCaixa" class="input-box">
+            <h1 style="font-family:Arial">Tokenize sua Arte!</h1>
+            <p class="passos">1.Digite o Título e a descrição.</p>
+            <p class="passos">2.Anexe o Endereço da Imagem ou Faça o Upload de um SVG ou Digite um Texto para sua Imagem.</p>
+            <p class="passos">3.Pronto! </p>
+            <p class="passos">Sua Arte pode ser encontrada no OpenSea.</p>
+            <p class="passos" id="totalArtes">Total de Artes Registradas: <span id="artesRegistradas"></span></p>
+        </div>
+
+        <!-- <div class="input-box" id="inputesCaixa">
+            <h1 style="color: #3F9B82;font-family: Arial;">Off Chain</h1>
+            <input class="inputes" id="nome" type="text" placeholder="Título da Obra">
+            <input class="inputes" id="descricao" type="text" placeholder="Descrição">
+            <input class="inputes" id="linkImagemIpfs" type="text" placeholder="Endereço da imagem">
+            <button class="registerBtn" id="registerBtn">Registrar (0.005 ETH)</button>
+        </div> -->
+        <div class="input-box" id="inputesCaixa">
+            <!-- <h1 style="color: #3F9B82;font-family: Arial;">On Chain</h1> -->
+            <input class="inputes" id="nomeOnChain" type="text" placeholder="Título da Obra">
+            <input class="inputes" id="descricaoOnChain" type="text" placeholder="Descrição">
+            <br>
+            <p>Faça upload de um SVG</p>
+            <input class="inputFile" id="inputSVG" type="file" accept=".svg" placeholder="Digite um texto">
+            <p>ou</p>
+            <input class="inputes" id="linkImagemIpfs" type="text" placeholder="Digite o endereço da imagem">
+            <p>ou</p>
+            <input class="inputes" id="inputOnChain" type="text" placeholder="Digite um texto" maxLength="50">
+            <button class="registerBtn" id="registerBtnChain">Registrar (0.008 ETH)</button>
+        </div>
+    </main>
+
+    <div class="exposition">
+        <div class="expositionBox">
+            <div class="imageBox">
+                <img id="image" src="https://tokenaim.com.br/favicon.ico" alt="" srcset="">
+            </div>
+            <div class="artInfo">
+                <h1 class="artInfoText">Obra: <span id="obraNome"></span> </h1>
+                <h1 class="artInfoText">Descrição: <span id="descricaoNome"></span> </h1>
+                <h1 class="artInfoText">Proprietário: <span id="proprietarioNome"></span> <button id="copyToClipBoardOwnerBtn">Copy</button></h1>
+            </div>
+        </div>
+
+    </div>
+    <footer>
+        <div class="contractAddressDiv">
+            <p class="passos">Endereço do Contrato: <span id="contractAddressSpan"></span> <button id="copyContractAddressBtn">Copy</button></p>
+        </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.8.1/web3.min.js"
+        integrity="sha512-vtUOC0YIaNm/UutU7yfnwqnF9LOYnXtpHe2kwi1nvJNloeGQuncNBiEKP/3Ww3D62USAhbXGsnYpAYoiDsa+wA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./script.js" type="module"></script>
+</body>
+
+</html>
