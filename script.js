@@ -750,26 +750,31 @@ let accounts = await ethereum.request({ method: 'eth_requestAccounts' });
 let account = await accounts[0].toString().toLowerCase();
 proprietarioNome.innerHTML = account;
 const slideContainer = document.getElementById("image");
-var artes = await getArtes();
-var images = [];
-for (let i = 0; i < artes.length; i++) {
-    images[i] = await getImageLink(artes[i]);
-}
-let currentImageIndex = 0;
-slideContainer.src = images[currentImageIndex];
-getArtInfo(artes[currentImageIndex]).then((call) => {
-    obraNome.innerHTML = `${call.name}`;
-    descricaoNome.innerHTML = `${call.description}`;
-})
 
-function nextSlide() {
-    currentImageIndex = (currentImageIndex + 1) % images.length;
+async function main() {
+    var artes = await getArtes();
+    var images = [];
+    for (let i = 0; i < artes.length; i++) {
+        images[i] = await getImageLink(artes[i]);
+    }
+    let currentImageIndex = 0;
     slideContainer.src = images[currentImageIndex];
     getArtInfo(artes[currentImageIndex]).then((call) => {
         obraNome.innerHTML = `${call.name}`;
         descricaoNome.innerHTML = `${call.description}`;
     })
+
+
+
+    function nextSlide() {
+        currentImageIndex = (currentImageIndex + 1) % images.length;
+        slideContainer.src = images[currentImageIndex];
+        getArtInfo(artes[currentImageIndex]).then((call) => {
+            obraNome.innerHTML = `${call.name}`;
+            descricaoNome.innerHTML = `${call.description}`;
+        })
+    }
+
+    setInterval(nextSlide, 4000);
 }
-
-setInterval(nextSlide, 4000);
-
+main()
