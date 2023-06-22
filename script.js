@@ -746,12 +746,12 @@ async function getArtes() {
     }
 }
 
+async function main() {
 let accounts = await ethereum.request({ method: 'eth_requestAccounts' });
 let account = await accounts[0].toString().toLowerCase();
 proprietarioNome.innerHTML = account;
 const slideContainer = document.getElementById("image");
 
-async function main() {
     var artes = await getArtes();
     var images = [];
     for (let i = 0; i < artes.length; i++) {
